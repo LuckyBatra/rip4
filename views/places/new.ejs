@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House on Rent</title>
+</head>
+<body>
+    <h3> Create a New Place</h3>
+    <form method="POST" action="/places">
+        <input name="place[title]" placeholder="enter title" type="text" required/>
+        <br />
+        <textarea name="place[description]" placeholder="enter description"></textarea> 
+        <br />
+        <!-- Updated image URL input to match the schema -->
+        <input name="place[imageUrl]" placeholder="enter image link" type="text" required/>
+        <br />
+        <input name="place[price]" placeholder="enter price" type="number"/>
+        <br />
+        <input name="place[country]" placeholder="enter country" type="text"/>
+        <br />
+        <input name="place[location]" placeholder="enter location" type="text"/>
+        <br />
+        <button>Add</button> 
+    </form>
+</body>
+</html>

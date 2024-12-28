@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House on Rent</title>
+</head>
+<body>
+    <h3> Edit Your place</h3>
+    <form method="POST" action="/places/<%= place._id %>?_method=PUT">
+        <input name="place[title]" value="<%= place.title %>" type="text" />
+        <br />
+        <textarea name="place[description]"><%= place.description %></textarea>
+        <br />
+        <input name="place[imageUrl]" value="<%= place.image.url %>" type="text" />
+        <br />
+        <input name="place[price]" value="<%= place.price %>" type="number" />
+        <br />
+        <input name="place[country]" value="<%= place.country %>" type="text" />
+        <br />
+        <input name="place[location]" value="<%= place.location %>" type="text" />
+        <br />
+        <button>Edit</button>
+    </form>
+</body>
+</html>
